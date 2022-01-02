@@ -1,9 +1,8 @@
-// const colors = require("@tailwindcss/postcss7-compat/colors");
-const colors = require('tailwindcss/colors')
+const colors = require("@tailwindcss/postcss7-compat/colors");
 
 module.exports = {
   purge: ["./public/**/*.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: false,
   theme: {
     colors: {
       transparent: 'transparent',
@@ -18,7 +17,9 @@ module.exports = {
     extend: {},
   },
   variants: {
-    extend: {},
+    extend: {
+      translate: ['group-hover'],
+    },
   },
   plugins: [],
 };
