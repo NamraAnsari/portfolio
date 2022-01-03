@@ -4,7 +4,7 @@
     class="
       max-w-7xl
       mx-auto
-      h-50vh
+      h-80vh
       lg:h-screen
       relative
       py-8
@@ -21,11 +21,13 @@
       class="
         sm:text-center
         lg:text-left
-        lg:w-3/4
-        lg:absolute
-        lg:top-1/2
-        lg:transform
-        lg:-translate-y-1/2
+        w-max lg:w-3/4
+        absolute
+        top-1/2 
+        left-1/2 lg:left-auto
+        transform
+        -translate-x-1/2 lg:translate-x-0
+        -translate-y-1/2
       "
     >
       <h1
@@ -156,3 +158,8 @@ export default {
   },
 };
 </script>
+<style scoped>
+.c_p_hero-sec{
+  transform: translate(-50%, -50%);
+}
+</style>
