@@ -9,7 +9,59 @@
 html{
   scroll-behavior: smooth;
 }
-
 body {
-  @apply bg-gray-50 h-auto w-full overflow-x-hidden;
+  @apply bg-gray-100 w-full h-auto overflow-x-hidden;
+}
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes revealLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes revealRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.c_p_reveal{
+  opacity: 0;
+  transform: translateY(-3rem);
+}
+.active .c_p_reveal, .c_p_main-heading{
+  animation: reveal 2s ease-out forwards;
+}
+.c_p_reveal-left {
+  opacity: 0;
+  transform: translateX(10rem);
+}
+.active .c_p_reveal-left, .c_p_clipart {
+  animation: revealLeft 2s ease-out forwards;
+}
+.c_p_reveal-right {
+  opacity: 0;
+  transform: translateX(-10rem);
+}
+.active .c_p_reveal-right {
+  animation: revealRight 2s ease-out forwards;
 }

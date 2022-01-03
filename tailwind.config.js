@@ -14,7 +14,11 @@ module.exports = {
     fontFamily: {
       sans: [ 'Poppins', 'Helvetica', 'sans-serif' ]
     },
-    extend: {},
+    extend: {
+      height: {
+        "50vh": '50vh',
+      }
+    },
   },
   variants: {
     extend: {

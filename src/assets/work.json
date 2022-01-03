@@ -1,0 +1,30 @@
+[
+  {
+    "src": "brandlogos.png",
+    "alt": "brandlogos.org",
+    "text": "Designed & Developed Front-End of Brandlogos Website",
+    "tech_used": ["Adobe XD", "Nuxt JS", "BootstrapVue"],
+    "url": "http://brandlogos.org/"
+  },
+  {
+    "src": "zifup.png",
+    "alt": "zifup.com",
+    "text": "Designed & Developed Front-End of Zifup Website",
+    "tech_used": ["Nuxt JS", "Tailwind CSS"],
+    "url": "https://beta.zifup.com/"
+  },
+  {
+    "src": "cmdce.png",
+    "alt": "ClipMyDeals Chrome Extension",
+    "text": "Designed & Developed Front-End of ClipMyDeals Chrome Extension",
+    "tech_used": ["Adobe XD", "HTML5", "CSS3"],
+    "url": "https://clipmydeals.com/add-ons.php#extension"
+  },
+  {
+    "src": "cmdapp.png",
+    "alt": "ClipMyDeals App",
+    "text": "Designed & Developed Front-End of the Product Page & Coupon Page of an App",
+    "tech_used": ["Adobe XD", "Flutter"],
+    "url": "https://clipmydeals.com/add-ons.php#apps"
+  }
+]

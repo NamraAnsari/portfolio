@@ -1,5 +1,5 @@
 <template>
-  <section id="about" class="bg-violet-900 px-4 sm:px-6 lg:px-8">
+  <section id="about" class="bg-violet-900 px-2 sm:px-6 lg:px-8">
     <div
       class="
         max-w-7xl
@@ -15,22 +15,58 @@
         <img
           src="../assets/Profile.png"
           alt="Profile Photo"
-          class="w-full h-auto"
+          class="w-full h-auto c_p_reveal-right"
         />
       </div>
       <div class="lg:w-2/3 sm:text-center lg:text-left mt-8 lg:mt-0">
-        <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-white">
+        <h2
+          class="
+            text-3xl
+            lg:text-4xl
+            xl:text-5xl
+            font-bold
+            text-white
+            c_p_reveal
+          "
+        >
           About Me
         </h2>
-        <p class="pt-8 lg:pt-11 text-white text-base xl:text-xl font-medium">
+        <p
+          class="
+            c_p_reveal-left
+            pt-8
+            lg:pt-11
+            text-white text-base
+            xl:text-xl
+            font-medium
+          "
+        >
           Qualified IT Engineer with 1+ year of experience in designing &
           developing Front-Ends of various web / mobile based Applications
           incorporating a range of technologies.
         </p>
-        <p class="pt-5 lg:pt-7 text-white text-base xl:text-xl font-medium">
+        <p
+          class="
+            c_p_reveal-left
+            pt-5
+            lg:pt-7
+            text-white text-base
+            xl:text-xl
+            font-medium
+          "
+        >
           Eager to learn new technologies & methodologies.
         </p>
-        <p class="pt-5 lg:pt-7 text-white text-base xl:text-xl font-medium">
+        <p
+          class="
+            c_p_reveal-left
+            pt-5
+            lg:pt-7
+            text-white text-base
+            xl:text-xl
+            font-medium
+          "
+        >
           Always willing to innovate new things & improve existing technology.
         </p>
       </div>

@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="overflow-x-hidden overflow-y-auto">
     <Intro />
     <About />
     <Work />

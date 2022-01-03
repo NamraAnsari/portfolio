@@ -4,15 +4,15 @@
     class="
       max-w-7xl
       mx-auto
+      h-50vh
       lg:h-screen
       relative
       py-8
       sm:py-16
       md-py-20
-      lg:pt-0
-      lg:pb-28
+      lg:pt-0 lg:pb-28
       xl:pb-32
-      px-4
+      px-2
       sm:px-6
       lg:px-8
     "
@@ -37,6 +37,7 @@
           sm:text-5xl
           md:text-6xl
           xl:text-7xl
+          c_p_main-heading
         "
       >
         <span class="block">Hii,</span>
@@ -53,6 +54,7 @@
           md:mt-5 md:text-2xl
           xl:text-3xl
           lg:mx-0
+          c_p_main-heading
         "
       >
         Front-End Developer | UI UX Designer
@@ -106,9 +108,20 @@
               hover:text-violet-800
               border-b-2 border-l-0 border-r-0 border-t-0 border-violet-700
               hover:border-violet-800
+              group
             "
           >
-            Contact Me<ArrowNarrowRightIcon class="ml-4 w-6 h-6 inline-block" />
+            Contact Me<ArrowNarrowRightIcon
+              class="
+                ml-4
+                w-6
+                h-6
+                inline-block
+                transition-transform
+                transform
+                group-hover:translate-x-1
+              "
+            />
           </a>
         </div>
       </div>
@@ -126,7 +139,7 @@
       "
     >
       <img
-        class="object-cover lg:w-full lg:h-auto"
+        class="object-cover lg:w-full lg:h-auto c_p_clipart"
         src="../assets/ClipArt.png"
         alt=""
       />

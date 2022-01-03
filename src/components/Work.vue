@@ -8,20 +8,30 @@
       sm:py-16
       md:py-20
       lg:py-24
-      px-4
+      px-2
       sm:px-6
       lg:px-8
     "
   >
-    <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-violet-700">
+    <h2
+      class="
+        c_p_reveal-right
+        text-3xl
+        lg:text-4xl
+        xl:text-5xl
+        font-bold
+        text-violet-700
+      "
+    >
       My Work
     </h2>
-    <p class="text-lg text-gray-500 font-semibold pt-2">
+    <p class="c_p_reveal-right text-lg text-gray-500 font-semibold pt-2">
       Worked on the Front-Ends of...
     </p>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 pt-12">
       <div
         class="
+          c_p_work-samples
           w-full
           h-44
           border border-gray-100
@@ -35,7 +45,9 @@
         v-for="(project, pIdx) in projects"
         :key="pIdx"
       >
-        <div class="w-full h-full px-8 flex justify-center items-center bg-white">
+        <div
+          class="w-full h-full px-8 flex justify-center items-center bg-white"
+        >
           <img
             :src="require(`../assets/${project.src}`)"
             :alt="project.alt"
@@ -45,10 +57,6 @@
         <div
           class="
             absolute
-            transition-transform
-            transform
-            translate-y-full
-            group-hover:translate-y-0
             inset-0
             w-full
             h-full
@@ -57,6 +65,10 @@
             p-4
             xl:p-6
             flex flex-col
+            transition-transform
+            transform
+            translate-y-full
+            group-hover:translate-y-0
           "
         >
           <div class="flex-auto">
@@ -65,8 +77,7 @@
             </p>
             <ul
               class="
-                flex
-                flex-wrap
+                flex flex-wrap
                 space-x-4
                 list-inside
                 text-sm
@@ -75,7 +86,11 @@
                 list-disc
               "
             >
-              <li class="mt-2" v-for="(tech, tIdx) in project.tech_used" :key="tIdx">
+              <li
+                class="mt-2"
+                v-for="(tech, tIdx) in project.tech_used"
+                :key="tIdx"
+              >
                 {{ tech }}
               </li>
             </ul>
@@ -90,22 +105,14 @@
               font-semibold
               text-white
               border-b border-b-2 border-white
-              group
+              c_p_visit-btn
             "
             >Visit URL<ArrowNarrowRightIcon
-              class="
-                w-4
-                h-4
-                inline-block
-                ml-2
-                transition-transform
-                transform
-                group-hover:translate-x-1
-              "
+              class="w-4 h-4 inline-block ml-2 transition-transform c_p_arrow"
           /></a>
         </div>
       </div>
-      <p class="text-2xl lg:text-3xl font-semibold text-gray-500 self-end">
+      <p class="c_p_work-samples text-2xl lg:text-3xl font-semibold text-gray-500 self-end">
         & Many More...
       </p>
     </div>
@@ -114,44 +121,46 @@
 
 <script>
 import { ArrowNarrowRightIcon } from "@heroicons/vue/outline";
+import projects from "../assets/work.json";
 export default {
   name: "Work",
   components: {
     ArrowNarrowRightIcon,
   },
+  mounted() {
+    var factor = 0.5
+    Array.from(document.getElementsByClassName("c_p_work-samples")).forEach(
+      (sample, sIdx) => {
+        sample.style.animationDelay = (factor*sIdx)+'s' 
+      }
+    );
+  },
   data() {
     return {
-      projects: [
-        {
-          src: "brandlogos.png",
-          alt: "brandlogos.org",
-          text: "Designed & Developed Front-End of Brandlogos Website",
-          tech_used: ["Adobe XD", "Nuxt JS", "BootstrapVue"],
-          url: "http://brandlogos.org/",
-        },
-        {
-          src: "zifup.png",
-          alt: "zifup.com",
-          text: "Designed & Developed Front-End of Zifup Website",
-          tech_used: ["Nuxt JS", "Tailwind CSS"],
-          url: "https://beta.zifup.com/",
-        },
-        {
-          src: "cmdce.png",
-          alt: "ClipMyDeals Chrome Extension",
-          text: "Designed & Developed Front-End of ClipMyDeals Chrome Extension",
-          tech_used: ["Adobe XD", "HTML5", "CSS3"],
-          url: "https://clipmydeals.com/add-ons.php#extension",
-        },
-        {
-          src: "cmdapp.png",
-          alt: "ClipMyDeals App",
-          text: "Designed & Developed Front-End of the Product Page & Coupon Page of an App",
-          tech_used: ["Adobe XD", "Flutter"],
-          url: "https://clipmydeals.com/add-ons.php#apps",
-        },
-      ],
+      projects: projects,
     };
   },
 };
 </script>
+<style scoped>
+.c_p_visit-btn:hover .c_p_arrow {
+  transform: translateX(0.375rem);
+}
+@keyframes revealBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#work .c_p_work-samples {
+  opacity: 0;
+  transform: translateY(3rem);
+}
+#work.active .c_p_work-samples {
+  animation: revealBottom 2s ease-out forwards;
+}
+</style>

@@ -5,7 +5,7 @@
         max-w-7xl
         mx-auto
         py-8
-        px-4
+        px-2
         sm:px-6
         lg:px-8
       "
