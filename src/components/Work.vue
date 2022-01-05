@@ -161,6 +161,6 @@ export default {
   transform: translateY(3rem);
 }
 #work.active .c_p_work-samples {
-  animation: revealBottom 2s ease-out forwards;
+  animation: revealBottom 1.5s ease-out forwards;
 }
 </style>

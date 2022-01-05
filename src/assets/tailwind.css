@@ -49,19 +49,19 @@ body {
   transform: translateY(-3rem);
 }
 .active .c_p_reveal, .c_p_main-heading{
-  animation: reveal 2s ease-out forwards;
+  animation: reveal 1.5s ease-out forwards;
 }
 .c_p_reveal-left {
   opacity: 0;
   transform: translateX(10rem);
 }
 .active .c_p_reveal-left, .c_p_clipart {
-  animation: revealLeft 2s ease-out forwards;
+  animation: revealLeft 1.5s ease-out forwards;
 }
 .c_p_reveal-right {
   opacity: 0;
   transform: translateX(-10rem);
 }
 .active .c_p_reveal-right {
-  animation: revealRight 2s ease-out forwards;
+  animation: revealRight 1.5s ease-out forwards;
 }
